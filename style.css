@@ -3,20 +3,23 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  font-family: 'Josefin Sans', sans-serif;
+  font-family: "Josefin Sans", sans-serif;
 }
 
 .container {
   max-width: 40rem;
   height: auto;
-  padding: 4rem;
+  padding: 2rem 4rem;
+  opacity: 0;
+  transition: opacity 0.7s ease-in-out;
 }
 
 img {
   max-width: 100%;
 }
 
-h1 {
+h1,
+h2 {
   text-align: center;
   color: #dedede;
   text-transform: uppercase;
@@ -24,8 +27,79 @@ h1 {
   margin-top: 4rem;
 }
 
+h2 {
+  font-size: 2rem;
+  margin: 0 0 2rem 0;
+}
+
+h3 {
+  display: none;
+}
+
 .player {
-  margin-top: 4rem;
+  margin-top: 2rem;
   display: flex;
   justify-content: center;
+}
+
+ul.links {
+  list-style: none;
+  display: flex;
+  padding: 2rem;
+  width: 100%;
+  box-sizing: border-box;
+  justify-content: space-around;
+}
+
+.link-text {
+  display: none;
+}
+
+.fab {
+  color: #dedede;
+  font-size: 2rem;
+}
+
+footer {
+  margin-top: 2rem;
+  color: #dedede;
+  text-align: center;
+}
+
+@media only screen and (max-width: 768px) {
+  .container {
+    width: 24rem;
+    padding: 2rem 0;
+  }
+
+  h1 {
+    font-size: 3rem;
+  }
+  h2 {
+    font-size: 2rem;
+  }
+}
+@media only screen and (max-width: 424px) {
+  .container {
+    width: 20rem;
+    padding: 2rem 0;
+  }
+  h1 {
+    font-size: 2rem;
+  }
+  h2 {
+    font-size: 1rem;
+  }
+}
+@media only screen and (max-width: 375px) {
+  .container {
+    width: 16rem;
+    padding: 1rem 0;
+  }
+  h1 {
+    font-size: 2rem;
+  }
+  h2 {
+    font-size: 1rem;
+  }
 }

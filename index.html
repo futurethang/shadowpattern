@@ -4,6 +4,10 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://kit.fontawesome.com/8f0f9227fe.js"
+      crossorigin="anonymous"
+    ></script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -11,22 +15,93 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="style.css" />
-    <title>Shadow Pattern</title>
+    <title>Shadow Pattern - Seattle Rock Band</title>
+    <meta
+      name="description"
+      content="Shadow Pattern is a new Seattle Washington rock band that plays surfy, psychedelic music with nods to American blues and 80's pop music. Washy and gritty reverb drenched guitars, spacy organ and smooth keyboards, warm soulful female vocals, and pop-sensible bass lines over surfy rhythms"
+    />
   </head>
   <body>
     <div class="container">
-      <h1>Shadow Pattern</h1>
-      <img src="./Demonstration_Artwork.png" alt="album artwork" />
-      <div class="player">
-        <iframe
-          style="border: 0; width: 600px; height: 374px"
-          src="https://bandcamp.com/EmbeddedPlayer/album=3178066742/size=large/bgcol=333333/linkcol=e32c14/artwork=small/transparent=true/"
-          seamless
-          ><a href="https://shadowpattern.bandcamp.com/album/demonstration"
-            >Demonstration by Shadow Pattern</a
-          ></iframe
-        >
-      </div>
+      <header>
+        <h1>Shadow Pattern</h1>
+        <h2>Seattle WA</h2>
+      </header>
+      <main>
+        <h3>Debut EP "Demonstration"</h3>
+        <img
+          src="./Demonstration_Artwork.png"
+          alt="album artwork for EP titled Demonstration"
+        />
+        <ul class="links">
+          <li>
+            <a
+              target="blank"
+              href="https://soundcloud.com/user-922331601"
+              aria-label="Link to Soundcloud Page"
+              title="Soundcloud"
+            >
+              <i class="fab fa-soundcloud"></i>
+              <span class="link-text">Soundcloud</span>
+            </a>
+          </li>
+          <li>
+            <a
+              target="blank"
+              href="https://shadowpattern.bandcamp.com/?from=viewsite_dashboard"
+              aria-label="Link to Bandcamp Page"
+              title="Bandcamp"
+            >
+              <i class="fab fa-bandcamp"></i>
+              <span class="link-text">Bandcamp</span>
+            </a>
+          </li>
+          <li>
+            <a
+              target="blank"
+              href="https://www.facebook.com/shadowpatternband/"
+              aria-label="Link to Facebook Page"
+              title="Facebook"
+            >
+              <i class="fab fa-facebook"></i>
+              <span class="link-text">Facebook</span>
+            </a>
+          </li>
+          <li>
+            <a
+              target="blank"
+              href="https://www.instagram.com/shadowpatternband/"
+              aria-label="Link to Instagram"
+              title="Instagram"
+            >
+              <i class="fab fa-instagram"></i>
+              <span class="link-text">Instagram</span>
+            </a>
+          </li>
+        </ul>
+        <div class="player">
+          <iframe
+            style="border: 0; width: 600px; height: 374px"
+            src="https://bandcamp.com/EmbeddedPlayer/album=3178066742/size=large/bgcol=333333/linkcol=e32c14/artwork=small/transparent=true/"
+            seamless
+            ><a
+              target="blank" href="https://shadowpattern.bandcamp.com/album/demonstration"
+              >Demonstration by Shadow Pattern</a
+            ></iframe
+          >
+        </div>
+      </main>
+
+      <footer>copyright © 2021 Shadow Pattern</footer>
     </div>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        var container = document.querySelector(".container");
+
+        setTimeout(function () {
+          container.style.opacity = "1";
+        }, 1200);
+      });
+    </script>
   </body>
 </html>
