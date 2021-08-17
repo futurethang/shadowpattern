@@ -18,6 +18,47 @@ img {
   max-width: 100%;
 }
 
+.layers {
+  display: block;
+  position: relative;
+}
+
+.layers > img:not(.three) {
+  transition: all 2s ease-in;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.layers > img.one:after {
+  content: "";
+  background: rgba(255, 0, 0, 0.5);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.layers > img.two:after {
+  content: "";
+  background: rgba(0, 0, 255, 0.5);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.layers img.one:hover {
+  mix-blend-mode: hue;
+  transform: translate(2px, 2px);
+}
+.layers img.two:hover {
+  mix-blend-mode: hue;
+  transform: translate(-2px, -2px);
+}
+
 h1,
 h2 {
   text-align: center;
@@ -60,10 +101,23 @@ ul.links {
   font-size: 2rem;
 }
 
+.email {
+  color: #dedede;
+  text-decoration: none;
+}
+
+.email:hover {
+  text-decoration: underline;
+}
+
 footer {
   margin-top: 2rem;
   color: #dedede;
   text-align: center;
+}
+
+footer > div {
+  margin: 0.5rem 0;
 }
 
 @media only screen and (max-width: 768px) {

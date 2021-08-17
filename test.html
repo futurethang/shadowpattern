@@ -29,10 +29,23 @@
       </header>
       <main>
         <h3>Debut EP "Demonstration"</h3>
-        <img
-          src="./Demonstration_Artwork.png"
-          alt="album artwork for EP titled Demonstration"
-        />
+        <div class="layers">
+          <!-- <img
+            class="layer one"
+            src="./layer-art-test.jpg"
+            alt="album artwork for EP titled Demonstration"
+          />
+          <img
+            class="layer two"
+            src="./layer-art-test.jpg"
+            alt="album artwork for EP titled Demonstration"
+          /> -->
+          <img
+            class="layer three"
+            src="./layer-art-test.jpg"
+            alt="album artwork for EP titled Demonstration"
+          />
+        </div>
         <ul class="links">
           <li>
             <a
@@ -100,8 +113,44 @@
         <div>copyright © 2021 Shadow Pattern</div>
       </footer>
     </div>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="js/jquery.anaglyphimage.min.js"></script>
     <script>
       document.addEventListener("DOMContentLoaded", function () {
+        var image = $("img.layer");
+
+        var animationId;
+        let last_known_scroll_position = 0;
+        let ticking = false;
+
+        window.addEventListener("scroll", function (e) {
+          last_known_scroll_position = window.scrollY;
+          startAction();
+          if (!ticking) {
+            window.requestAnimationFrame(function () {
+              stopAction();
+              ticking = false;
+            });
+            ticking = true;
+          }
+        });
+
+        function doAnimation() {
+          image.anaglyphImage({
+            intensity: 1,
+            quality: 0.9,
+          });
+
+          reqAnimationId = requestAnimationFrame(doAnimation);
+        }
+
+        function startAction() {
+          reqAnimationId = requestAnimationFrame(doAnimation);
+        }
+        function stopAction() {
+          cancelAnimationFrame(reqAnimationId);
+        }
+
         var container = document.querySelector(".container");
 
         setTimeout(function () {
