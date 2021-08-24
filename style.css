@@ -1,5 +1,8 @@
 body {
-  background-color: #161515;
+  background-image: url("./bg.jpg");
+  background-repeat: repeat;
+  background-size: contain;
+  background-attachment: fixed;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -7,6 +10,7 @@ body {
 }
 
 .container {
+  background-color: rgba(0, 0, 0, 0.7);
   max-width: 40rem;
   height: auto;
   padding: 2rem 4rem;
