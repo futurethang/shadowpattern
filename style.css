@@ -79,6 +79,7 @@ h3 {
 
 h4 {
   font-size: 2rem;
+  color: #dedede;
   text-transform: uppercase;
 }
 
@@ -92,6 +93,10 @@ h4 {
 }
 .shows a:hover {
   color: red;
+}
+
+.past img {
+  max-width: 20rem;
 }
 
 .player {
