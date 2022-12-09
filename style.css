@@ -3,7 +3,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  font-family: "Josefin Sans", sans-serif;
+  font-family: 'Josefin Sans', sans-serif;
 }
 
 .container {
@@ -16,6 +16,10 @@ body {
 
 img {
   max-width: 100%;
+}
+
+img:not(.album) {
+  max-width: 60%;
 }
 
 .layers {
@@ -31,7 +35,7 @@ img {
 }
 
 .layers > img.one:after {
-  content: "";
+  content: '';
   background: rgba(255, 0, 0, 0.5);
   position: absolute;
   top: 0;
@@ -41,7 +45,7 @@ img {
 }
 
 .layers > img.two:after {
-  content: "";
+  content: '';
   background: rgba(0, 0, 255, 0.5);
   position: absolute;
   top: 0;
